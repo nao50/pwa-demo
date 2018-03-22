@@ -9,7 +9,8 @@
       "outDir": "dist",
       "assets": [
         "assets",
-        "favicon.ico"
+        "favicon.ico",
+        "manifest.json"
       ],
       "index": "index.html",
       "main": "main.ts",
@@ -27,7 +28,37 @@
         "dev": "environments/environment.ts",
         "prod": "environments/environment.prod.ts"
       },
-      "serviceWorker": true
+      "serviceWorker": true,
+      "appShell": {
+        "app": "universal-app",
+        "route": "shell"
+      }
+    },
+    {
+      "root": "src",
+      "outDir": "dist-server",
+      "assets": [
+        "assets",
+        "favicon.ico"
+      ],
+      "index": "index.html",
+      "main": "main.server.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.server.json",
+      "testTsconfig": "tsconfig.spec.json",
+      "prefix": "app",
+      "styles": [
+        "styles.scss"
+      ],
+      "scripts": [],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      },
+      "serviceWorker": true,
+      "platform": "server",
+      "name": "universal-app"
     }
   ],
   "e2e": {
